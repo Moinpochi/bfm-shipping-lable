@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Label Generator</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>📦 Brand Label Generator</h1>
+
+  <div class="form-box">
+    <input type="text" id="rname" placeholder="Receiver Name">
+    <textarea id="raddress" placeholder="Receiver Address"></textarea>
+    <input type="text" id="rphone" placeholder="Receiver Phone">
+
+    <input type="text" id="sname" placeholder="Sender Name">
+    <textarea id="saddress" placeholder="Sender Address"></textarea>
+    <input type="text" id="sphone" placeholder="Sender Phone">
+
+    <button onclick="generateLabel()">Generate Label</button>
+    <button onclick="downloadLabel()">Download Label</button>
+  </div>
+
+  <div id="label" class="label">
+    <div class="top-strip"></div>
+
+    <div class="label-logo">
+      <img src="brand-logo.png" alt="Brand Logo">
+    </div>
+
+    <div class="section big" id="showReceiver"></div>
+    <div class="section" id="showSender"></div>
+
+    <div class="footer">Packed with Care • Ready to Ship</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
